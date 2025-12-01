@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ResultRepository.cs" />
     <Compile Include="DAL\TestRepository.cs" />
     <Compile Include="DAL\PatienRepository.cs" />
     <Compile Include="Form1.cs">
