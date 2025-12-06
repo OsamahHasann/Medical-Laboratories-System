@@ -35,11 +35,10 @@
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -158,9 +157,8 @@
             "انثى"});
             this.kryptonComboBox1.DropDownWidth = 121;
             this.kryptonComboBox1.Items.AddRange(new object[] {
-            "الطبيب",
-            "المدير",
-            "المطور"});
+            "ذكر",
+            "انثى"});
             this.kryptonComboBox1.Location = new System.Drawing.Point(281, 199);
             this.kryptonComboBox1.MaximumSize = new System.Drawing.Size(250, 33);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
@@ -180,36 +178,6 @@
             this.kryptonComboBox1.StateCommon.Item.Back.Color1 = System.Drawing.Color.DodgerBlue;
             this.kryptonComboBox1.TabIndex = 17;
             this.kryptonComboBox1.Text = "الجنس";
-            // 
-            // kryptonComboBox2
-            // 
-            this.kryptonComboBox2.AutoCompleteCustomSource.AddRange(new string[] {
-            "ذكر",
-            "انثى"});
-            this.kryptonComboBox2.DropDownWidth = 121;
-            this.kryptonComboBox2.Items.AddRange(new object[] {
-            "الطبيب",
-            "المدير",
-            "المطور"});
-            this.kryptonComboBox2.Location = new System.Drawing.Point(281, 250);
-            this.kryptonComboBox2.MaximumSize = new System.Drawing.Size(250, 33);
-            this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonComboBox2.Size = new System.Drawing.Size(238, 33);
-            this.kryptonComboBox2.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Rounding = 20;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBox2.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonComboBox2.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Helvetica Neue W23 for SKY Reg", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox2.StateCommon.DropBack.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox2.StateCommon.Item.Back.Color1 = System.Drawing.Color.DodgerBlue;
-            this.kryptonComboBox2.TabIndex = 20;
-            this.kryptonComboBox2.Text = "الجنس";
             // 
             // kryptonButton1
             // 
@@ -259,6 +227,27 @@
             this.kryptonButton2.TabIndex = 22;
             this.kryptonButton2.Values.Text = "رجوع";
             // 
+            // kryptonTextBox4
+            // 
+            this.kryptonTextBox4.Location = new System.Drawing.Point(281, 250);
+            this.kryptonTextBox4.MaximumSize = new System.Drawing.Size(400, 33);
+            this.kryptonTextBox4.Name = "kryptonTextBox4";
+            this.kryptonTextBox4.Size = new System.Drawing.Size(238, 33);
+            this.kryptonTextBox4.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox4.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox4.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox4.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox4.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox4.StateCommon.Border.Width = 1;
+            this.kryptonTextBox4.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Helvetica Neue W23 for SKY Reg", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox4.TabIndex = 23;
+            this.kryptonTextBox4.Text = "الهاتف";
+            this.kryptonTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Patient_data_Entry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,19 +255,18 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.kryptonComboBox2);
             this.Controls.Add(this.kryptonTextBox3);
             this.Controls.Add(this.kryptonComboBox1);
             this.Controls.Add(this.kryptonTextBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.kryptonTextBox4);
             this.Name = "Patient_data_Entry";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.Text = "Patient_data_Entry";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,8 +280,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
     }
 }
