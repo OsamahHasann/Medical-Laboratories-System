@@ -87,6 +87,7 @@
             this.checkBox48 = new System.Windows.Forms.CheckBox();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // kryptonPalette2
@@ -835,11 +836,36 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(144, 7);
             this.flowLayoutPanel3.TabIndex = 24;
             // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Location = new System.Drawing.Point(691, 509);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton3.Size = new System.Drawing.Size(111, 37);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonButton3.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonButton3.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton3.StateCommon.Border.Rounding = 20;
+            this.kryptonButton3.StateCommon.Border.Width = 1;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.TabIndex = 79;
+            this.kryptonButton3.Values.Text = "رجوع";
+            // 
             // Diseases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 494);
+            this.ClientSize = new System.Drawing.Size(829, 573);
+            this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.checkBox9);
             this.Controls.Add(this.checkBox10);
@@ -967,5 +993,6 @@
         private System.Windows.Forms.CheckBox checkBox48;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

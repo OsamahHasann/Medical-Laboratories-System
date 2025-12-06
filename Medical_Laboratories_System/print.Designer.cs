@@ -98,7 +98,7 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(362, 391);
+            this.kryptonButton2.Location = new System.Drawing.Point(338, 388);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonButton2.Size = new System.Drawing.Size(107, 36);
@@ -122,7 +122,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(248, 391);
+            this.kryptonButton1.Location = new System.Drawing.Point(224, 388);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonButton1.Size = new System.Drawing.Size(108, 37);
@@ -627,7 +627,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label11.Location = new System.Drawing.Point(758, 402);
             this.label11.Name = "label11";
