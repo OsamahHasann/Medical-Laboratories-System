@@ -4,11 +4,11 @@ using System.Linq;
 
 public class PatientRepository
 {
-    private readonly MedicalLabDBEntities _db;
+    private readonly MedicalLabDBEntities1 _db;
 
     public PatientRepository()
     {
-        _db = new MedicalLabDBEntities();
+        _db = new MedicalLabDBEntities1();
     }
 
     public List<Patients> GetAllPatients()

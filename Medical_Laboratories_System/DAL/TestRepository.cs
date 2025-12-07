@@ -4,30 +4,30 @@ using System.Linq;
 
 public class TestRepository
 {
-    private readonly MedicalLabDBEntities _db;
+    private readonly MedicalLabDBEntities1 _db;
 
     public TestRepository()
     {
-        _db = new MedicalLabDBEntities();
+        _db = new MedicalLabDBEntities1();
     }
 
-    public List<Tests> GetAll()
+    public List<Medical_Tests> GetAll()
     {
-        return _db.Tests.ToList();
+        return _db.Medical_Tests.ToList();
     }
 
-    public Tests GetById(int id)
+    public Medical_Tests GetById(int id)
     {
-        return _db.Tests.FirstOrDefault(t => t.TestId == id);
+        return _db.Medical_Tests.FirstOrDefault(t => t.TestId == id);
     }
 
-    public void Add(Tests entity)
+    public void Add(Medical_Tests entity)
     {
-        _db.Tests.Add(entity);
+        _db.Medical_Tests.Add(entity);
         _db.SaveChanges();
     }
 
-    public void Update(Tests entity)
+    public void Update(Medical_Tests entity)
     {
         _db.Entry(entity).State = System.Data.Entity.EntityState.Modified;
         _db.SaveChanges();
@@ -35,10 +35,10 @@ public class TestRepository
 
     public void Delete(int id)
     {
-        var entity = _db.Tests.Find(id);
+        var entity = _db.Medical_Tests.Find(id);
         if (entity != null)
         {
-            _db.Tests.Remove(entity);
+            _db.Medical_Tests.Remove(entity);
             _db.SaveChanges();
         }
     }

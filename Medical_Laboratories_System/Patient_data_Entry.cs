@@ -27,6 +27,16 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            Patients patients = new Patients(); 
+            patients.FullName=txtFullName.Text;
+            patients.Gender = ComboGender.SelectedItem.ToString();
+            patients.Age =Convert.ToInt32(txtAge.Text);
+            patients.Phone = txtPhone.Text;
+            patients.Phone = txtPhone.Text;
+            patients.Address = txtAdress.Text;
+            PatientRepository patientRepository = new PatientRepository();  
+            patientRepository.AddPatient(patients);
+
             Diseases diseases = new Diseases();
             diseases.Show();
             this.Hide();
