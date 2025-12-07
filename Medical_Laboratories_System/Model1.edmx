@@ -5,69 +5,73 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="MedicalLabDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bookings">
+          <Key>
+            <PropertyRef Name="BookingId" />
+          </Key>
+          <Property Name="BookingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PatientId" Type="int" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+          <Property Name="BookingDate" Type="datetime" />
+          <Property Name="Result" Type="nvarchar(max)" />
+          <Property Name="ResultDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Medical_Tests">
+          <Key>
+            <PropertyRef Name="TestId" />
+          </Key>
+          <Property Name="TestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="TestPrice" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+        </EntityType>
         <EntityType Name="Patients">
           <Key>
             <PropertyRef Name="PatientId" />
           </Key>
           <Property Name="PatientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FullName" Type="nvarchar" MaxLength="100" />
-          <Property Name="Gender" Type="nvarchar" MaxLength="10" />
-          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Age" Type="int" />
+          <Property Name="CreatedAt" Type="datetime" />
         </EntityType>
-        <EntityType Name="Results">
-          <Key>
-            <PropertyRef Name="ResultId" />
-          </Key>
-          <Property Name="ResultId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PatientId" Type="int" />
-          <Property Name="TestId" Type="int" />
-          <Property Name="ResultValue" Type="nvarchar" MaxLength="100" />
-          <Property Name="ResultDate" Type="date" />
-        </EntityType>
-        <EntityType Name="Tests">
-          <Key>
-            <PropertyRef Name="TestId" />
-          </Key>
-          <Property Name="TestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TestName" Type="nvarchar" MaxLength="100" />
-          <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
-        </EntityType>
-        <Association Name="FK__Results__Patient__286302EC">
-          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
-          <End Role="Results" Type="Self.Results" Multiplicity="*" />
+        <Association Name="FK_Bookings_Patient">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
+          <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Patients">
               <PropertyRef Name="PatientId" />
             </Principal>
-            <Dependent Role="Results">
+            <Dependent Role="Bookings">
               <PropertyRef Name="PatientId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Results__TestId__29572725">
-          <End Role="Tests" Type="Self.Tests" Multiplicity="0..1" />
-          <End Role="Results" Type="Self.Results" Multiplicity="*" />
+        <Association Name="FK_Bookings_Test">
+          <End Role="Medical_Tests" Type="Self.Medical_Tests" Multiplicity="1" />
+          <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Tests">
+            <Principal Role="Medical_Tests">
               <PropertyRef Name="TestId" />
             </Principal>
-            <Dependent Role="Results">
+            <Dependent Role="Bookings">
               <PropertyRef Name="TestId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="MedicalLabDBModelStoreContainer">
+          <EntitySet Name="Bookings" EntityType="Self.Bookings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medical_Tests" EntityType="Self.Medical_Tests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Results__Patient__286302EC" Association="Self.FK__Results__Patient__286302EC">
+          <AssociationSet Name="FK_Bookings_Patient" Association="Self.FK_Bookings_Patient">
             <End Role="Patients" EntitySet="Patients" />
-            <End Role="Results" EntitySet="Results" />
+            <End Role="Bookings" EntitySet="Bookings" />
           </AssociationSet>
-          <AssociationSet Name="FK__Results__TestId__29572725" Association="Self.FK__Results__TestId__29572725">
-            <End Role="Tests" EntitySet="Tests" />
-            <End Role="Results" EntitySet="Results" />
+          <AssociationSet Name="FK_Bookings_Test" Association="Self.FK_Bookings_Test">
+            <End Role="Medical_Tests" EntitySet="Medical_Tests" />
+            <End Role="Bookings" EntitySet="Bookings" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -75,73 +79,77 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MedicalLabDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bookings">
+          <Key>
+            <PropertyRef Name="BookingId" />
+          </Key>
+          <Property Name="BookingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientId" Type="Int32" Nullable="false" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <Property Name="BookingDate" Type="DateTime" Precision="3" />
+          <Property Name="Result" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ResultDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Bookings_Patient" FromRole="Bookings" ToRole="Patients" />
+          <NavigationProperty Name="Medical_Tests" Relationship="Self.FK_Bookings_Test" FromRole="Bookings" ToRole="Medical_Tests" />
+        </EntityType>
+        <EntityType Name="Medical_Tests">
+          <Key>
+            <PropertyRef Name="TestId" />
+          </Key>
+          <Property Name="TestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TestPrice" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bookings" Relationship="Self.FK_Bookings_Test" FromRole="Medical_Tests" ToRole="Bookings" />
+        </EntityType>
         <EntityType Name="Patients">
           <Key>
             <PropertyRef Name="PatientId" />
           </Key>
           <Property Name="PatientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Results" Relationship="Self.FK__Results__Patient__286302EC" FromRole="Patients" ToRole="Results" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Bookings" Relationship="Self.FK_Bookings_Patient" FromRole="Patients" ToRole="Bookings" />
         </EntityType>
-        <EntityType Name="Results">
-          <Key>
-            <PropertyRef Name="ResultId" />
-          </Key>
-          <Property Name="ResultId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PatientId" Type="Int32" />
-          <Property Name="TestId" Type="Int32" />
-          <Property Name="ResultValue" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="ResultDate" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="Patients" Relationship="Self.FK__Results__Patient__286302EC" FromRole="Results" ToRole="Patients" />
-          <NavigationProperty Name="Tests" Relationship="Self.FK__Results__TestId__29572725" FromRole="Results" ToRole="Tests" />
-        </EntityType>
-        <EntityType Name="Tests">
-          <Key>
-            <PropertyRef Name="TestId" />
-          </Key>
-          <Property Name="TestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TestName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="Results" Relationship="Self.FK__Results__TestId__29572725" FromRole="Tests" ToRole="Results" />
-        </EntityType>
-        <Association Name="FK__Results__Patient__286302EC">
-          <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
-          <End Role="Results" Type="Self.Results" Multiplicity="*" />
+        <Association Name="FK_Bookings_Patient">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
+          <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Patients">
               <PropertyRef Name="PatientId" />
             </Principal>
-            <Dependent Role="Results">
+            <Dependent Role="Bookings">
               <PropertyRef Name="PatientId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Results__TestId__29572725">
-          <End Role="Tests" Type="Self.Tests" Multiplicity="0..1" />
-          <End Role="Results" Type="Self.Results" Multiplicity="*" />
+        <Association Name="FK_Bookings_Test">
+          <End Role="Medical_Tests" Type="Self.Medical_Tests" Multiplicity="1" />
+          <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Tests">
+            <Principal Role="Medical_Tests">
               <PropertyRef Name="TestId" />
             </Principal>
-            <Dependent Role="Results">
+            <Dependent Role="Bookings">
               <PropertyRef Name="TestId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MedicalLabDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MedicalLabDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bookings" EntityType="Self.Bookings" />
+          <EntitySet Name="Medical_Tests" EntityType="Self.Medical_Tests" />
           <EntitySet Name="Patients" EntityType="Self.Patients" />
-          <EntitySet Name="Results" EntityType="Self.Results" />
-          <EntitySet Name="Tests" EntityType="Self.Tests" />
-          <AssociationSet Name="FK__Results__Patient__286302EC" Association="Self.FK__Results__Patient__286302EC">
+          <AssociationSet Name="FK_Bookings_Patient" Association="Self.FK_Bookings_Patient">
             <End Role="Patients" EntitySet="Patients" />
-            <End Role="Results" EntitySet="Results" />
+            <End Role="Bookings" EntitySet="Bookings" />
           </AssociationSet>
-          <AssociationSet Name="FK__Results__TestId__29572725" Association="Self.FK__Results__TestId__29572725">
-            <End Role="Tests" EntitySet="Tests" />
-            <End Role="Results" EntitySet="Results" />
+          <AssociationSet Name="FK_Bookings_Test" Association="Self.FK_Bookings_Test">
+            <End Role="Medical_Tests" EntitySet="Medical_Tests" />
+            <End Role="Bookings" EntitySet="Bookings" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -149,35 +157,39 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MedicalLabDBModelStoreContainer" CdmEntityContainer="MedicalLabDBEntities">
+        <EntityContainerMapping StorageEntityContainer="MedicalLabDBModelStoreContainer" CdmEntityContainer="MedicalLabDBEntities1">
+          <EntitySetMapping Name="Bookings">
+            <EntityTypeMapping TypeName="MedicalLabDBModel.Bookings">
+              <MappingFragment StoreEntitySet="Bookings">
+                <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+                <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="ResultDate" ColumnName="ResultDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medical_Tests">
+            <EntityTypeMapping TypeName="MedicalLabDBModel.Medical_Tests">
+              <MappingFragment StoreEntitySet="Medical_Tests">
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="TestName" ColumnName="TestName" />
+                <ScalarProperty Name="TestPrice" ColumnName="TestPrice" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Patients">
             <EntityTypeMapping TypeName="MedicalLabDBModel.Patients">
               <MappingFragment StoreEntitySet="Patients">
                 <ScalarProperty Name="PatientId" ColumnName="PatientId" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Results">
-            <EntityTypeMapping TypeName="MedicalLabDBModel.Results">
-              <MappingFragment StoreEntitySet="Results">
-                <ScalarProperty Name="ResultId" ColumnName="ResultId" />
-                <ScalarProperty Name="PatientId" ColumnName="PatientId" />
-                <ScalarProperty Name="TestId" ColumnName="TestId" />
-                <ScalarProperty Name="ResultValue" ColumnName="ResultValue" />
-                <ScalarProperty Name="ResultDate" ColumnName="ResultDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Tests">
-            <EntityTypeMapping TypeName="MedicalLabDBModel.Tests">
-              <MappingFragment StoreEntitySet="Tests">
-                <ScalarProperty Name="TestId" ColumnName="TestId" />
-                <ScalarProperty Name="TestName" ColumnName="TestName" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

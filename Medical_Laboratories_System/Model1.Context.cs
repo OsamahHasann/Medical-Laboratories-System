@@ -13,10 +13,10 @@ namespace Medical_Laboratories_System
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MedicalLabDBEntities : DbContext
+    public partial class MedicalLabDBEntities1 : DbContext
     {
-        public MedicalLabDBEntities()
-            : base("name=MedicalLabDBEntities")
+        public MedicalLabDBEntities1()
+            : base("name=MedicalLabDBEntities1")
         {
         }
     
@@ -25,8 +25,8 @@ namespace Medical_Laboratories_System
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Bookings> Bookings { get; set; }
+        public virtual DbSet<Medical_Tests> Medical_Tests { get; set; }
         public virtual DbSet<Patients> Patients { get; set; }
-        public virtual DbSet<Results> Results { get; set; }
-        public virtual DbSet<Tests> Tests { get; set; }
     }
 }

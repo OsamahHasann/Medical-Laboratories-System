@@ -17,16 +17,18 @@ namespace Medical_Laboratories_System
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Patients()
         {
-            this.Results = new HashSet<Results>();
+            this.Bookings = new HashSet<Bookings>();
         }
     
         public int PatientId { get; set; }
         public string FullName { get; set; }
         public string Gender { get; set; }
-        public Nullable<System.DateTime> DateOfBirth { get; set; }
         public string Phone { get; set; }
+        public string Address { get; set; }
+        public Nullable<int> Age { get; set; }
+        public Nullable<System.DateTime> CreatedAt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Results> Results { get; set; }
+        public virtual ICollection<Bookings> Bookings { get; set; }
     }
 }

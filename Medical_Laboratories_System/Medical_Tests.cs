@@ -12,19 +12,20 @@ namespace Medical_Laboratories_System
     using System;
     using System.Collections.Generic;
     
-    public partial class Tests
+    public partial class Medical_Tests
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tests()
+        public Medical_Tests()
         {
-            this.Results = new HashSet<Results>();
+            this.Bookings = new HashSet<Bookings>();
         }
     
         public int TestId { get; set; }
         public string TestName { get; set; }
-        public Nullable<decimal> Price { get; set; }
+        public decimal TestPrice { get; set; }
+        public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Results> Results { get; set; }
+        public virtual ICollection<Bookings> Bookings { get; set; }
     }
 }

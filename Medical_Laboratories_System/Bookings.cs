@@ -12,15 +12,16 @@ namespace Medical_Laboratories_System
     using System;
     using System.Collections.Generic;
     
-    public partial class Results
+    public partial class Bookings
     {
-        public int ResultId { get; set; }
-        public Nullable<int> PatientId { get; set; }
-        public Nullable<int> TestId { get; set; }
-        public string ResultValue { get; set; }
+        public int BookingId { get; set; }
+        public int PatientId { get; set; }
+        public int TestId { get; set; }
+        public Nullable<System.DateTime> BookingDate { get; set; }
+        public string Result { get; set; }
         public Nullable<System.DateTime> ResultDate { get; set; }
     
         public virtual Patients Patients { get; set; }
-        public virtual Tests Tests { get; set; }
+        public virtual Medical_Tests Medical_Tests { get; set; }
     }
 }
