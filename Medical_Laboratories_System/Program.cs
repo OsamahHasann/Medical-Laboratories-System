@@ -14,6 +14,8 @@ namespace Medical_Laboratories_System
         [STAThread]
         static void Main()
         {
+           
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login_in());
