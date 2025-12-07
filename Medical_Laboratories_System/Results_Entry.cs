@@ -11,31 +11,30 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Medical_Laboratories_System
 {
-    public partial class Diseases : KryptonForm
+    public partial class Results_Entry : KryptonForm
     {
-        public Diseases()
+        public Results_Entry()
         {
             InitializeComponent();
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void Results_Entry_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            print p = new print();
+            this.Hide();
+            p.Show();
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            Patient_data_Entry patient = new Patient_data_Entry();
-            patient.Show();
+            Diseases diseases = new Diseases();
+            diseases.Show();
             this.Hide();
-        }
-
-        private void kryptonButton4_Click(object sender, EventArgs e)
-        {
-            Results_Entry results = new Results_Entry();
-            this.Hide();
-            results.Show();
-
         }
     }
 }

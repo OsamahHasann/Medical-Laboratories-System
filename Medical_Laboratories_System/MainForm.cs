@@ -45,8 +45,8 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            Patient_data_Entry p = new Patient_data_Entry();
-            p.Show();
+            Patient_data_Entry patient = new Patient_data_Entry();
+            patient.Show();
             this.Hide();
         }
 

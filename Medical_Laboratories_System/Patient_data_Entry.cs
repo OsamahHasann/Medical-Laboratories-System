@@ -27,7 +27,9 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-
+            Diseases diseases = new Diseases();
+            diseases.Show();
+            this.Hide();
         }
     }
 }
