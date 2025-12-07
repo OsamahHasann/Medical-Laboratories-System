@@ -45,7 +45,9 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-
+            Patient_data_Entry p = new Patient_data_Entry();
+            p.Show();
+            this.Hide();
         }
 
         private void kryptonButton5_Click(object sender, EventArgs e)
@@ -81,6 +83,13 @@ namespace Medical_Laboratories_System
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Login_in Login=new Login_in();
+            this.Hide();
+            Login.Show();
         }
     }
 }
