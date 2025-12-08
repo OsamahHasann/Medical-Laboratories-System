@@ -97,5 +97,12 @@ namespace Medical_Laboratories_System
         {
 
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Record record = new Record();
+            this.Hide();
+            record.Show();
+        }
     }
 }

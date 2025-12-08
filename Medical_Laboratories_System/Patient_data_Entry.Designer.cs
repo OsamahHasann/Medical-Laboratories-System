@@ -38,6 +38,8 @@
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnback = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txtPhone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.ComboGender)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,11 +79,10 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(328, 119);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFullName.MaximumSize = new System.Drawing.Size(467, 33);
+            this.txtFullName.Location = new System.Drawing.Point(281, 97);
+            this.txtFullName.MaximumSize = new System.Drawing.Size(400, 33);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(278, 33);
+            this.txtFullName.Size = new System.Drawing.Size(238, 33);
             this.txtFullName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.txtFullName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtFullName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -102,21 +103,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Alexandria", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(324, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(278, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 43);
+            this.label1.Size = new System.Drawing.Size(230, 34);
             this.label1.TabIndex = 14;
             this.label1.Text = "تسجيل بيانات المريض";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(328, 180);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAge.MaximumSize = new System.Drawing.Size(467, 33);
+            this.txtAge.Location = new System.Drawing.Point(281, 146);
+            this.txtAge.MaximumSize = new System.Drawing.Size(400, 33);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(278, 33);
+            this.txtAge.Size = new System.Drawing.Size(238, 33);
             this.txtAge.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.txtAge.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtAge.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -134,11 +133,10 @@
             // 
             // txtAdress
             // 
-            this.txtAdress.Location = new System.Drawing.Point(328, 373);
-            this.txtAdress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAdress.MaximumSize = new System.Drawing.Size(467, 33);
+            this.txtAdress.Location = new System.Drawing.Point(281, 303);
+            this.txtAdress.MaximumSize = new System.Drawing.Size(400, 33);
             this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(278, 33);
+            this.txtAdress.Size = new System.Drawing.Size(238, 33);
             this.txtAdress.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.txtAdress.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtAdress.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -163,12 +161,11 @@
             this.ComboGender.Items.AddRange(new object[] {
             "ذكر",
             "انثى"});
-            this.ComboGender.Location = new System.Drawing.Point(328, 245);
-            this.ComboGender.Margin = new System.Windows.Forms.Padding(4);
-            this.ComboGender.MaximumSize = new System.Drawing.Size(292, 33);
+            this.ComboGender.Location = new System.Drawing.Point(281, 199);
+            this.ComboGender.MaximumSize = new System.Drawing.Size(250, 33);
             this.ComboGender.Name = "ComboGender";
             this.ComboGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ComboGender.Size = new System.Drawing.Size(278, 33);
+            this.ComboGender.Size = new System.Drawing.Size(238, 33);
             this.ComboGender.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ComboGender.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ComboGender.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -186,11 +183,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(492, 457);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(422, 371);
             this.btnSave.Name = "btnSave";
             this.btnSave.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnSave.Size = new System.Drawing.Size(107, 46);
+            this.btnSave.Size = new System.Drawing.Size(92, 37);
             this.btnSave.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnSave.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnSave.StateCommon.Back.ColorAngle = 45F;
@@ -212,11 +208,10 @@
             // 
             // btnback
             // 
-            this.btnback.Location = new System.Drawing.Point(372, 457);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Location = new System.Drawing.Point(319, 371);
             this.btnback.Name = "btnback";
             this.btnback.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnback.Size = new System.Drawing.Size(107, 46);
+            this.btnback.Size = new System.Drawing.Size(92, 37);
             this.btnback.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnback.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnback.StateCommon.Back.ColorAngle = 45F;
@@ -238,11 +233,10 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(328, 308);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhone.MaximumSize = new System.Drawing.Size(467, 33);
+            this.txtPhone.Location = new System.Drawing.Point(281, 250);
+            this.txtPhone.MaximumSize = new System.Drawing.Size(400, 33);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(278, 33);
+            this.txtPhone.Size = new System.Drawing.Size(238, 33);
             this.txtPhone.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.txtPhone.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtPhone.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -258,11 +252,61 @@
             this.txtPhone.Text = "الهاتف";
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // kryptonButton4
+            // 
+            this.kryptonButton4.Location = new System.Drawing.Point(597, 359);
+            this.kryptonButton4.Name = "kryptonButton4";
+            this.kryptonButton4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton4.Size = new System.Drawing.Size(110, 36);
+            this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton4.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton4.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton4.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton4.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton4.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton4.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton4.StateCommon.Border.Rounding = 20;
+            this.kryptonButton4.StateCommon.Border.Width = 1;
+            this.kryptonButton4.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton4.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Alexandria Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton4.TabIndex = 82;
+            this.kryptonButton4.Values.Text = "التالي";
+            // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Location = new System.Drawing.Point(474, 359);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton3.Size = new System.Drawing.Size(111, 37);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonButton3.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonButton3.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton3.StateCommon.Border.Rounding = 20;
+            this.kryptonButton3.StateCommon.Border.Width = 1;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Alexandria", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.TabIndex = 81;
+            this.kryptonButton3.Values.Text = "رجوع";
+            // 
             // Patient_data_Entry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.kryptonButton4);
+            this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtAdress);
@@ -271,7 +315,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.txtPhone);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Patient_data_Entry";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -294,5 +337,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnback;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhone;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

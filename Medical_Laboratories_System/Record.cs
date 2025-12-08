@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Medical_Laboratories_System
 {
-    public partial class _ٌRecord : KryptonForm
+    public partial class Record : KryptonForm
     {
-        public _ٌRecord()
+        public Record()
         {
             InitializeComponent();
         }
