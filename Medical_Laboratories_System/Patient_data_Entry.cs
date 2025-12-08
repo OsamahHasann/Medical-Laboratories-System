@@ -27,6 +27,9 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+         
+
+            PatientRepository patientRepository = new PatientRepository();  
             try
             {
                 Patients patients = new Patients();
@@ -37,9 +40,9 @@ namespace Medical_Laboratories_System
                 patients.Phone = txtPhone.Text;
                 patients.Address = txtAdress.Text;
                 patients.CreatedAt = DateTime.Now;
+               int idPatient= patientRepository.AddPatient(patients);
 
-                PatientRepository patientRepository = new PatientRepository();
-              int idPatient=  patientRepository.AddPatient(patients);
+              
 
                 Diseases diseases = new Diseases(idPatient);
                 diseases.Show();
