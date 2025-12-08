@@ -27,5 +27,9 @@ namespace Medical_Laboratories_System
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bookings> Bookings { get; set; }
+        public override string ToString()
+        {
+            return $"{TestName} - {TestPrice}—Ì«·"; 
+        }
     }
 }

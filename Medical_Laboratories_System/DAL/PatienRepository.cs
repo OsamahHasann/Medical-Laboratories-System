@@ -21,10 +21,11 @@ public class PatientRepository
         return _db.Patients.FirstOrDefault(p => p.PatientId == id);
     }
 
-    public void AddPatient(Patients p)
+    public int AddPatient(Patients p)
     {
         _db.Patients.Add(p);
         _db.SaveChanges();
+        return p.PatientId;
     }
 
     public void UpdatePatient(Patients p)

@@ -45,7 +45,7 @@ namespace Medical_Laboratories_System
                 DataPropertyName= "FullName"
                 ,
                 HeaderText="الاسم",
-                Width  =100
+                Width  =120
             });
            
         }

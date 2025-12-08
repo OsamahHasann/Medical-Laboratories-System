@@ -91,5 +91,10 @@ namespace Medical_Laboratories_System
             this.Hide();
             Login.Show();
         }
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+             ;
+        }
     }
 }

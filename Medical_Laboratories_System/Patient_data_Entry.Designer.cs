@@ -78,7 +78,7 @@
             // txtFullName
             // 
             this.txtFullName.Location = new System.Drawing.Point(328, 119);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.MaximumSize = new System.Drawing.Size(467, 33);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(278, 33);
@@ -100,12 +100,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Alexandria", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(326, 41);
+            this.label1.Location = new System.Drawing.Point(324, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 31);
+            this.label1.Size = new System.Drawing.Size(289, 43);
             this.label1.TabIndex = 14;
             this.label1.Text = "تسجيل بيانات المريض";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -113,7 +113,7 @@
             // txtAge
             // 
             this.txtAge.Location = new System.Drawing.Point(328, 180);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(4);
             this.txtAge.MaximumSize = new System.Drawing.Size(467, 33);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(278, 33);
@@ -135,7 +135,7 @@
             // txtAdress
             // 
             this.txtAdress.Location = new System.Drawing.Point(328, 373);
-            this.txtAdress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdress.MaximumSize = new System.Drawing.Size(467, 33);
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(278, 33);
@@ -164,7 +164,7 @@
             "ذكر",
             "انثى"});
             this.ComboGender.Location = new System.Drawing.Point(328, 245);
-            this.ComboGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboGender.Margin = new System.Windows.Forms.Padding(4);
             this.ComboGender.MaximumSize = new System.Drawing.Size(292, 33);
             this.ComboGender.Name = "ComboGender";
             this.ComboGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -187,7 +187,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(492, 457);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.btnSave.Size = new System.Drawing.Size(107, 46);
@@ -213,7 +213,7 @@
             // btnback
             // 
             this.btnback.Location = new System.Drawing.Point(372, 457);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
             this.btnback.Name = "btnback";
             this.btnback.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.btnback.Size = new System.Drawing.Size(107, 46);
@@ -239,7 +239,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(328, 308);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.MaximumSize = new System.Drawing.Size(467, 33);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(278, 33);
@@ -271,7 +271,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.txtPhone);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Patient_data_Entry";
             this.Palette = this.kryptonPalette2;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

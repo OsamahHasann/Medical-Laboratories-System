@@ -50,9 +50,39 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            MainForm main = new MainForm();
-            main.Show();
-            this.Hide();
+           
+                string username = selectUser.SelectedItem.ToString();
+                string docPassword = "doc";
+                string manPassword = "man";
+                string devPassword = "dev";
+                if (username == "الطبيب" && txtPass.Text == docPassword)
+                {
+                    MainForm main = new MainForm();
+                    main.Show();
+                    this.Hide();
+                    return;
+                }
+                else if (username == "المدير" && txtPass.Text == manPassword)
+                {
+                    MainForm main = new MainForm();
+                    main.Show();
+                    this.Hide();
+                    return;
+                }
+                else if (username == "المطور" && txtPass.Text == devPassword)
+                {
+                    MainForm main = new MainForm();
+                    main.Show();
+                    this.Hide();
+                    return;
+                }
+
+
+
+
+
+            
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

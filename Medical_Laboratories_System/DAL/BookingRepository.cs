@@ -1,4 +1,5 @@
 ﻿using Medical_Laboratories_System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,6 +25,20 @@ public class BookingRepository
     public void Add(Bookings entity)
     {
         _db.Bookings.Add(entity);
+        _db.SaveChanges();
+    }
+    public void AddBooking(int patientId, int testId, string result, DateTime resultDate)
+    {
+        Bookings b = new Bookings
+        {
+            PatientId = patientId,
+            TestId = testId,
+            Result = result,
+            ResultDate = resultDate,
+            BookingDate = DateTime.Now
+        };
+
+        _db.Bookings.Add(b);
         _db.SaveChanges();
     }
 

@@ -13,9 +13,12 @@ namespace Medical_Laboratories_System
 {
     public partial class Diseases : KryptonForm
     {
-        public Diseases()
+        int idPatients;
+        public Diseases(int idPatients)
         {
             InitializeComponent();
+            this.idPatients = idPatients;   
+
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -32,9 +35,44 @@ namespace Medical_Laboratories_System
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            Results_Entry results = new Results_Entry();
+             
+  var  selectedTests= checkedListTests.CheckedItems.Cast<Medical_Tests>().ToList();
+
+            Results_Entry results = new Results_Entry(selectedTests,idPatients);
             this.Hide();
             results.Show();
+
+        }
+        private TestRepository testRepository=new TestRepository();
+
+        private void Diseases_Load(object sender, EventArgs e)
+        {
+            LoadTestsToCheckedList();
+
+        }
+        private void LoadTestsToCheckedList()
+        {
+            try
+            {
+                var tests=testRepository.GetAll();
+                checkedListTests.Items.Clear();
+                foreach(var t in tests)
+                {
+ checkedListTests.Items.Add(t, false);
+                }
+                checkedListTests.DisplayMember = "TestName";
+                checkedListTests.ValueMember = "TestId";
+
+
+            }catch(Exception e)
+            {
+                MessageBox.Show("حصل غلط");
+            }
+        }
+
+        private void checkedListTests_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
 
         }
     }

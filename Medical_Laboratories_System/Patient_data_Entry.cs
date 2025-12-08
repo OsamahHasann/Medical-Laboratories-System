@@ -37,10 +37,11 @@ namespace Medical_Laboratories_System
                 patients.Phone = txtPhone.Text;
                 patients.Address = txtAdress.Text;
                 patients.CreatedAt = DateTime.Now;
-                PatientRepository patientRepository = new PatientRepository();
-                patientRepository.AddPatient(patients);
 
-                Diseases diseases = new Diseases();
+                PatientRepository patientRepository = new PatientRepository();
+              int idPatient=  patientRepository.AddPatient(patients);
+
+                Diseases diseases = new Diseases(idPatient);
                 diseases.Show();
                 this.Hide();
             }
