@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class ResultRepository
+public class BookingRepository
 {
     private readonly MedicalLabDBEntities1 _db;
 
-    public ResultRepository()
+    public BookingRepository()
     {
         _db = new MedicalLabDBEntities1();
     }
